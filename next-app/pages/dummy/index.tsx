@@ -1,14 +1,31 @@
+// import react or next
 import { useEffect } from 'react';
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 
+// import store
 import { useAppSelector } from '@/store';
 import { init, clear, update } from '@/usecases/dummy';
 
+// import components
 import { Layout } from '@/components/templates/layout';
 import { Template } from '@/components/templates/template';
 
-const DummyPage: NextPage = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const developerNames = ['asamin', 'sugya'];
+  return {
+    props: {
+      developerNames,
+    },
+  };
+};
+
+export interface Props {
+  developerNames: string[];
+}
+
+const DummyPage: NextPage<Props> = (props: Props) => {
+  const { developerNames } = props;
   const title = 'Dummy Page - Open Camp';
   const description = 'dummy page of open camp';
 
@@ -16,7 +33,7 @@ const DummyPage: NextPage = () => {
   const { name } = useAppSelector((state) => state['ui/dummy']);
 
   const handleUpdate = async () => {
-    await update('updatedDummyState');
+    await update(`DummyState updated by ${developerNames.join('&')}`);
   };
   const handleClearButton = async () => {
     await clear();
