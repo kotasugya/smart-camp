@@ -1,3 +1,3 @@
 export const Footer = () => {
-  return <footer>Powered by asamin</footer>;
+  return <footer>Powered by asamin＆すぎゃ</footer>;
 };
