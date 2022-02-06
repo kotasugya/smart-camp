@@ -1,11 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 import { Template } from '@/components/templates/template';
 
-const Home: NextPage = function () {
+const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -20,6 +21,12 @@ const Home: NextPage = function () {
           Welcome to
           <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
+        <h2>
+          <Link href="/dummy">
+            <a href="replace">Go User Detail Page</a>
+          </Link>
+        </h2>
 
         <p className={styles.description}>
           Get started by editing
