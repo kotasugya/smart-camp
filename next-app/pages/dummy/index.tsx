@@ -61,7 +61,7 @@ const DummyPage: NextPage<Props> = (props: Props) => {
             handleUpdate();
           }}
         >
-          init state name
+          update state name
         </button>
         <button
           type="button"
