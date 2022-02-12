@@ -1,20 +1,16 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
-// import store
-import { useAppSelector } from '@/store';
+// import page model
+import { A1 } from '@/domain/ui/a-1';
 
+// import usecases
 import { clear, update } from '@/usecases/dummy';
 
-export interface DummyTemplateProps {
-  developerNames: string[];
-}
-
-export const DummyTemplate = (props: DummyTemplateProps) => {
-  const { developerNames } = props;
+export const DummyTemplate = (props: A1) => {
+  const { a1, name, developerNames } = props;
 
   const router = useRouter();
-  const { name } = useAppSelector((state) => state['ui/dummy']);
 
   const handleUpdate = async () => {
     await update(`DummyState updated by ${developerNames.join('&')}`);
@@ -29,7 +25,7 @@ export const DummyTemplate = (props: DummyTemplateProps) => {
   return (
     <div>
       <main>
-        <h1>Hey! This is Dummy Template</h1>
+        <h1>{a1.pageTitle}</h1>
         <h2>{`Developer Name: ${developerNames.join('&')}`}</h2>
         <h3>{name}</h3>
         <button

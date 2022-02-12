@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta } from '@/components/atoms/meta';
+import { Meta, MetaProps } from '@/components/atoms/meta';
 import { Navbar } from '@/components/molecules/navbar';
 import { Footer } from '@/components/organisms/footer';
 
@@ -8,15 +8,14 @@ import styles from '@/components/templates/navbar-footer-layout/index.module.css
 
 export interface LayoutProps {
   children: React.ReactChild;
-  title: string;
-  description: string;
+  meta: MetaProps;
 }
 
 export const NavbarFooterLayoutTemplate = (props: LayoutProps) => {
-  const { children, title, description } = props;
+  const { children, meta } = props;
   return (
     <div className={styles.container}>
-      <Meta title={title} description={description} />
+      <Meta {...meta} />
       <Navbar />
       <main>{children}</main>
       <Footer />
