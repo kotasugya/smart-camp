@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
         <h2>
           <Link href="/dummy">
-            <a href="replace">Go User Detail Page</a>
+            <a href="replace">Go User Dummy Page</a>
           </Link>
         </h2>
       </main>

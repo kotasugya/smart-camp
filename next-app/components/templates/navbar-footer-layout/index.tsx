@@ -4,7 +4,7 @@ import { Meta } from '@/components/atoms/meta';
 import { Navbar } from '@/components/molecules/navbar';
 import { Footer } from '@/components/organisms/footer';
 
-import styles from '@/components/templates/layout/layout.module.css';
+import styles from '@/components/templates/navbar-footer-layout/index.module.css';
 
 export interface LayoutProps {
   children: React.ReactChild;
@@ -12,7 +12,7 @@ export interface LayoutProps {
   description: string;
 }
 
-export const Layout = (props: LayoutProps) => {
+export const NavbarFooterLayoutTemplate = (props: LayoutProps) => {
   const { children, title, description } = props;
   return (
     <div className={styles.container}>

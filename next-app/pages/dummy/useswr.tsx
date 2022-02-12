@@ -1,7 +1,7 @@
 import axios from 'axios';
 import useSWR from 'swr';
 import { useAppSelector } from '@/store';
-import { Layout } from '@/components/templates/layout';
+import { NavbarFooterLayoutTemplate } from '@/components/templates/navbar-footer-layout';
 
 const Useswr = () => {
   const title = 'Dummy Page - Open Camp';
@@ -14,12 +14,12 @@ const Useswr = () => {
     console.log(data);
   }
   return (
-    <Layout title={title} description={description}>
+    <NavbarFooterLayoutTemplate title={title} description={description}>
       <main>
         <h1>Welcome to Dummy Page!</h1>
         <h3>{name}</h3>
       </main>
-    </Layout>
+    </NavbarFooterLayoutTemplate>
   );
 };
 
