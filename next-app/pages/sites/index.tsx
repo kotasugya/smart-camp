@@ -7,7 +7,7 @@ import { metaConfig } from '@/config/meta';
 import { NavbarFooterLayoutTemplate } from '@/components/templates/navbar-footer-layout';
 import { A2Template } from '@/components/templates/sites';
 
-const A2: NextPage = () => {
+const A2Page: NextPage = () => {
   return (
     <NavbarFooterLayoutTemplate meta={metaConfig.a2}>
       <A2Template />
@@ -15,4 +15,4 @@ const A2: NextPage = () => {
   );
 };
 
-export default A2;
+export default A2Page;
