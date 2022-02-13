@@ -7,7 +7,7 @@ import { metaConfig } from '@/config/meta';
 import { NavbarFooterLayoutTemplate } from '@/components/templates/navbar-footer-layout';
 import { B2Template } from '@/components/templates/users/show';
 
-const B2: NextPage = () => {
+const B2Page: NextPage = () => {
   return (
     <NavbarFooterLayoutTemplate meta={metaConfig.b2}>
       <B2Template />
@@ -15,4 +15,4 @@ const B2: NextPage = () => {
   );
 };
 
-export default B2;
+export default B2Page;

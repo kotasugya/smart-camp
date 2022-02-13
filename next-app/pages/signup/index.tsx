@@ -7,7 +7,7 @@ import { metaConfig } from '@/config/meta';
 import { NavbarFooterLayoutTemplate } from '@/components/templates/navbar-footer-layout';
 import { C1Template } from '@/components/templates/signup';
 
-const C1: NextPage = () => {
+const C1Page: NextPage = () => {
   return (
     <NavbarFooterLayoutTemplate meta={metaConfig.c1}>
       <C1Template />
@@ -15,4 +15,4 @@ const C1: NextPage = () => {
   );
 };
 
-export default C1;
+export default C1Page;
