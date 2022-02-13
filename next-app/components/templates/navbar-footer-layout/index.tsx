@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Meta, MetaProps } from '@/components/atoms/meta';
-import { Navbar } from '@/components/molecules/navbar';
+import { Navbar } from '@/components/organisms/navbar';
 import { Footer } from '@/components/organisms/footer';
 
 import styles from '@/components/templates/navbar-footer-layout/index.module.css';
