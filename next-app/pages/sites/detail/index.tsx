@@ -5,14 +5,14 @@ import { metaConfig } from '@/config/meta';
 
 // import components
 import { NavbarFooterLayoutTemplate } from '@/components/templates/navbar-footer-layout';
-import { IndexTemplate } from '@/components/templates/index';
+import { A3Template } from '@/components/templates/sites/detail';
 
-const A1: NextPage = () => {
+const A3: NextPage = () => {
   return (
-    <NavbarFooterLayoutTemplate meta={metaConfig.a1}>
-      <IndexTemplate />
+    <NavbarFooterLayoutTemplate meta={metaConfig.a3}>
+      <A3Template />
     </NavbarFooterLayoutTemplate>
   );
 };
 
-export default A1;
+export default A3;
