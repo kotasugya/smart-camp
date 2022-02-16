@@ -14,12 +14,12 @@ export const executeQuery = async (
   q: string,
   values: (string | number)[] | string | number = [],
 ) => {
-  try {
-    // const results = await db.query(q, values);
-    const results = `${q} ${values.toString()}`;
-    // await db.end();
-    return results;
-  } catch (e) {
-    throw Error(e.message);
-  }
+  // try {
+  // const results = await db.query(q, values);
+  const results = `${q} ${values.toString()}`;
+  // await db.end();
+  return results;
+  // } catch (e) {
+  //   throw Error(e.message);
+  // }
 };
