@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* デフォルトで適用するスタイル */
+@layer base {
+  h1 {
+    @apply text-6xl;
+  }
+}
+
+/* パターンごとに使い回し適用するスタイル */
+@layer components {
+  .hamburger-menu {
+    @apply inline-flex p-3 rounded lg:hidden text-gray-600 ml-auto hover:text-gray-600 outline-none;
+  }
+}

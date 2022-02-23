@@ -19,10 +19,7 @@ export const Navbar = () => {
           </span>
         </a>
       </Link>
-      <button
-        type="button"
-        className=" inline-flex p-3 rounded lg:hidden text-gray-600 ml-auto hover:text-gray-600 outline-none"
-      >
+      <button type="button" className="hamburger-menu">
         <svg
           className="w-6 h-6"
           fill="none"
